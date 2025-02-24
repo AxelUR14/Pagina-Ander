@@ -97,6 +97,10 @@ h2 {
 h2 {
     display: block;
 }
+summary h2{
+    background-color:rgb(255, 0, 0); /* Color de fondo */
+    color: white;
+}
 
 
 
