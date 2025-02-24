@@ -18,10 +18,7 @@ header, footer {
 main {
     flex-grow: 1; /* El contenido principal ocupa el espacio restante */
 }
-h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #FF0000; /* Títulos en rojo */
-}
+
 
 p {
     font-family: 'Open Sans', sans-serif;
