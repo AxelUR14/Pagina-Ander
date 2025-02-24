@@ -57,7 +57,7 @@ summary h3 {
     display: inline-block; /* Permite que el título esté en línea con el ícono personalizado */
     margin: 0; /*
      Elimina el margen predeterminado del h3 */
-     color:red
+     color:rgb(255, 0, 0)
 }
 ul {
     margin-top: 10px;
@@ -81,7 +81,7 @@ ul {
 
 
 h2 {
-    background-color:#928b8b; /* Color de fondo */
+    background-color:rgb(255, 0, 0); /* Color de fondo */
     color: white; /* Color del texto */
     padding: 10px; /* Espaciado interno */
     cursor: pointer; /* Cambia el cursor al pasar sobre el título */
@@ -93,7 +93,7 @@ h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-top: none;
-    color:#ff0000
+    color:#fffcfc
 }
 
 /* Mostrar el contenido cuando el acordeón está activo */
@@ -231,4 +231,3 @@ body {
 header, main, footer {
     padding: 20px;
 }
-

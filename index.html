@@ -26,22 +26,51 @@
 			<h1>ANDER Academia</h1>
 		</div>
 			<main>
-				
 				<header>
+					<!-- Botón del menú hamburguesa -->
+					<!--<div class="menu-icon" id="menu-icon">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				
+					 Menú desplegable 
+					<nav class="navbar" id="navbar">
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Clases</a></li>
+							<li><a href="#">Servicios</a></li>
+							<li><a href="#">Contacto</a></li>
+						</ul>
+					</nav>
+				</header>-->
+			
+				<section class="portada">
 					<img src="img-oscura.jpeg">
-				</header>
+				</section>
 				<!--<img src="img-gym.jpeg"><img src="img-adentro.jpeg">-->
 				
 				
-				
-				<h2>¿Que somos?</h2>
-				<div claas="fade-in">
+				<details>
+				<summary><h2>¿Que somos?</h2></summary>
+				<div class="fade-in">
 				<p>Somos un centro de actividades fisicas,
 					que cuenta con la mejor maquinaria y
 					entrenadores con una amplia experiencia.</p>
 				</div>
+				</details>
 				<div class="acordeon">
-					
+					<div class="fade-in">
+						
+					<!--<button id="open-modal">Abrir Modal</button>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <h2>¡Oferta Especial!</h2>
+        <p>Únete hoy y obtén un 20% de descuento en tu primera membresía.</p>
+    </div>
+</div>
+					</div>-->
 			        <details>
 					<summary><h2>¿Con que activiades contamos?:</h2></summary>
 					
@@ -76,10 +105,11 @@
 				</div>
 				</details>
 				</div>
+				<details>
 				
 		
 
-				<h2>¿Donde nos ubicamos?</h2>
+				<summary><h2>¿Donde nos ubicamos?</h2></summary>
 				<div class="fade-in">
 				<p>Contamos con una unica sede en "el huayco"
 					barrio:El Manzano,accede a nuestra ubicacion
@@ -87,6 +117,7 @@
 					<a href="https://maps.app.goo.gl/F2Qfj26EqoZD5UW9A" target="_blank" rel="noopener noreferrer"> Ubicacion</a>
 					</p>
 				</div>
+				</details>
 					<details>
 
                <summary><h2>Nuestros horarios:</h2></summary>
@@ -103,8 +134,9 @@
 
         
 				</p>
+				<details>
 				
-				<h3>Nuestras redes sociales:</h3>
+				<summary><h3>Nuestras redes sociales:</h3></summary>
 				<div class="fade-in">
 				<p>Contamos con una unica cuenta de instagram
 					con el nombre de "andergimnasio" o accede
@@ -112,14 +144,17 @@
 				</p>
 				<a href="https://www.instagram.com/andergimnasio?igsh=MXA0YXJqaXg5eWxs" target="_blank" rel="noopener noreferrer"> Instagram</a>
 				</div>
+				</details>
+				<details>
 
-				<h3>Contactanos:</h3>
+				<summary><h3>Contactanos:</h3></summary>
 				<div class="fade-in">
 				<p>Podes contactarte con nosotros mediante nuestro instagram
 					o bien mediante el siguiente numero de telefono(whatsaap):
 				</p>
 				<a href="http://wa.link/800fav" target="_blank" rel="noopener noferrer">Dudas y consultas</a>
 				</div>
+				</details>
 				<details>
 
 				<summary><h2>Descarga Tu Rutina:</h2></summary>
@@ -152,6 +187,15 @@
 
 			</main>
 		</footer>
+		
+
+		<!--<form id="contact-form">
+			<input type="text" id="name" placeholder="Nombre" required>
+			<input type="email" id="email" placeholder="Correo electrónico" required>
+			<textarea id="message" placeholder="Mensaje" required></textarea>
+			<button type="submit">Enviar</button>
+		</form>
+		<p id="form-message"></p>
 
 
 
