@@ -99,7 +99,11 @@ h2 {
 }
 summary h2{
     background-color:rgb(255, 0, 0); /* Color de fondo */
-    color: white;
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el título */
+    border: 1px solid #ccc; /* Borde opcional */
+    
 }
 
 
