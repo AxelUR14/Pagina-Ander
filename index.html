@@ -1,217 +1,570 @@
-<!DOCTYPE HTML>
-<!--
-	Landed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Landed by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload landing">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDER ACADEMIA | Fuerza y Disciplina</title>
+    
+    <!-- Fuentes de Google: Estilo Deportivo y Urbano -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-			<!-- Header -->
-				<header id="header">
-					<h1 id="logo"><a href="index.html">Landed</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li>
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li>
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Option 1</a></li>
-											<li><a href="#">Option 2</a></li>
-											<li><a href="#">Option 3</a></li>
-											<li><a href="#">Option 4</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
+    <style>
+        :root {
+            --rojo-neon: #FF0000;
+            --rojo-oscuro: #990000;
+            --negro-absoluto: #000000;
+            --negro-card: #0D0D0D;
+            --gris-premium: #1A1A1A;
+            --blanco-puro: #FFFFFF;
+            --blanco-mutado: #CCCCCC;
+        }
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<header>
-							<h2>The future has landed</h2>
-							<p>And there are no hoverboards or flying cars.<br />
-							Just apps. Lots of mother flipping apps.</p>
-						</header>
-						<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
-				</section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>Odio faucibus ipsum integer consequat</h2>
-										<p>Nascetur eu nibh vestibulum amet gravida nascetur praesent</p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
-									Blandit orci porttitor semper. Arcu phasellus tortor enim mi
-									nisi praesent dolor adipiscing. Integer mi sed nascetur cep aliquet
-									augue varius tempus lobortis porttitor accumsan consequat
-									adipiscing lorem dolor.</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>Morbi enim nascetur et placerat lorem sed iaculis neque ante
-									adipiscing adipiscing metus massa. Blandit orci porttitor semper.
-									Arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer
-									mi sed nascetur cep aliquet augue varius tempus. Feugiat lorem
-									ipsum dolor nullam.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
+        body {
+            background-color: var(--negro-absoluto);
+            color: var(--blanco-puro);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
 
-			<!-- Two -->
-				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Interdum amet non magna accumsan</h2>
-							<p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#three" class="goto-next scrolly">Next</a>
-				</section>
+        /* CONTENEDOR MÁXIMO ESTILO APP PREMIUM */
+        .wrapper {
+            max-width: 550px;
+            margin: 0 auto;
+            background-color: var(--negro-absoluto);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #222;
+            border-right: 1px solid #222;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.05);
+        }
 
-			<!-- Three -->
-				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-					<div class="content">
-						<header>
-							<h2>Interdum felis blandit praesent sed augue</h2>
-							<p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
-						</header>
-						<p>Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</div>
-					<a href="#four" class="goto-next scrolly">Next</a>
-				</section>
+        /* HEADER / NAV */
+        header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--gris-premium) 0%, var(--negro-absoluto) 100%);
+            border-bottom: 2px solid var(--rojo-neon);
+        }
 
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
-					<div class="container">
-						<header class="major">
-							<h2>Accumsan sed tempus adipiscing blandit</h2>
-							<p>Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu consequat</p>
-						</header>
-						<div class="box alt">
-							<div class="row gtr-uniform">
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-chart-area"></span>
-									<h3>Ipsum sed commodo</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-comment"></span>
-									<h3>Eleifend lorem ornare</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-flask"></span>
-									<h3>Cubilia cep lobortis</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-paper-plane"></span>
-									<h3>Non semper interdum</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-file"></span>
-									<h3>Odio laoreet accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-								<section class="col-4 col-6-medium col-12-xsmall">
-									<span class="icon solid alt major fa-lock"></span>
-									<h3>Massa arcu accumsan</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
-								</section>
-							</div>
-						</div>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="#" class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
 
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade">
-					<div class="container">
-						<header>
-							<h2>Magna faucibus lorem diam</h2>
-							<p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
-						</header>
-						<form method="post" action="#" class="cta">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
-								<div class="col-4 col-12-xsmall"><input type="submit" value="Get Started" class="fit primary" /></div>
-							</div>
-						</form>
-					</div>
-				</section>
+        .logo span {
+            color: var(--rojo-neon);
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
 
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
+        /* HERO SECTON */
+        .hero {
+            position: relative;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('img-oscura.jpeg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 0 24px 24px;
+            margin-bottom: 30px;
+        }
 
-		</div>
+        .hero h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .hero p {
+            color: var(--blanco-mutado);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
 
-	</body>
+        /* BADGES / ESTADÍSTICAS DEL GYM */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: var(--negro-card);
+            border: 1px solid #222;
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-card i {
+            color: var(--rojo-neon);
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .stat-card div {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .stat-card span {
+            font-size: 10px;
+            color: #777;
+        }
+
+        /* SECCIONES CONTENEDORAS */
+        section {
+            padding: 0 20px 30px;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background-color: var(--rojo-neon);
+            display: inline-block;
+            box-shadow: 0 0 8px var(--rojo-neon);
+        }
+
+        /* CARRUSEL DE IMÁGENES UPGRADED */
+        .carousel-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .carousel-item {
+            min-width: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #333;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+            z-index: 5;
+        }
+
+        .carousel-btn:hover {
+            background: var(--rojo-neon);
+            border-color: var(--rojo-neon);
+        }
+
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+
+        /* GRID DE ACTIVIDADES DE ALTO IMPACTO */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .activity-badge {
+            background: var(--negro-card);
+            border: 1px solid #1a1a1a;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .activity-badge i {
+            color: var(--rojo-neon);
+            font-size: 16px;
+        }
+
+        .activity-badge:hover {
+            border-color: var(--rojo-neon);
+            background: #120202;
+            transform: translateY(-2px);
+        }
+
+        /* TABLA DE HORARIOS PROFESIONAL */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--negro-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #1a1a1a;
+        }
+
+        .schedule-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 13px;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .day-column {
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--blanco-puro);
+            width: 40%;
+        }
+
+        .time-column {
+            color: var(--blanco-mutated);
+            text-align: right;
+        }
+
+        .time-column span {
+            color: var(--rojo-neon);
+            font-weight: 600;
+        }
+
+        /* BOTONES DE LLAMADA A LA ACCIÓN (CTA) */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            border-radius: 14px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        .btn-primary {
+            background: var(--rojo-neon);
+            color: var(--blanco-puro);
+            box-shadow: 0 4px 20px rgba(255, 0, 0, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--rojo-oscuro);
+            transform: scale(1.01);
+        }
+
+        .btn-secondary {
+            background: var(--gris-premium);
+            color: var(--blanco-puro);
+            border: 1px solid #333;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--rojo-neon);
+            background: var(--negro-card);
+        }
+
+        /* DESCARGA DE RUTINAS */
+        .routine-box {
+            background: var(--negro-card);
+            border: 1px solid #161616;
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .routine-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .routine-item:last-child {
+            border-bottom: none;
+        }
+
+        .routine-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .routine-info i {
+            color: var(--rojo-neon);
+            font-size: 18px;
+        }
+
+        .routine-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .download-icon-btn {
+            background: #222;
+            color: var(--blanco-puro);
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.2s;
+            border: 1px solid #333;
+        }
+
+        .download-icon-btn:hover {
+            background: var(--rojo-neon);
+            border-color: var(--rojo-neon);
+        }
+
+        /* ANIMACIÓN AL CARGAR */
+        .fade-in {
+            animation: varFade 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes varFade {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gris-premium);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: auto;
+            border-top: 1px solid #222;
+        }
+
+        footer p {
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- HEADER -->
+        <header>
+            <div class="logo">ANDER <span>ACADEMIA</span></div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <div class="hero fade-in">
+            <h2>ENTRENÁ AL MÁXIMO LEVEL</h2>
+            <p>Maquinarias de última generación y coach profesionales preparados para romper tus límites estructurales.</p>
+            
+            <!-- CONTENEDOR DE METRICAS DEL GYM -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <div>Premium</div>
+                    <span>Maquinaria</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-user-check"></i>
+                    <div>+100%</div>
+                    <span>Resultados</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>Amplio</div>
+                    <span>Horario</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN: QUE OFRECEMOS & CARRUSEL -->
+        <section class="fade-in" style="animation-delay: 0.1s;">
+            <h3 class="section-title">Nuestras Instalaciones</h3>
+            
+            <div class="carousel-container">
+                <div class="carousel-inner">
+                    <div class="carousel-item"><img src="carrusel1.jpeg" alt="Área de musculación"></div>
+                    <div class="carousel-item"><img src="carrusel2.jpeg" alt="Área de combate"></div>
+                    <div class="carousel-item"><img src="carrusel3.jpeg" alt="Entrenamiento funcional"></div>
+                </div>
+                <button class="carousel-btn prev">&#10094;</button>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-badge"><i class="fa-solid fa-weight-hanging"></i> Musculación</div>
+                <div class="activity-badge"><i class="fa-solid fa-bolt"></i> Funcional</div>
+                <div class="activity-badge"><i class="fa-solid fa-trophy"></i> Prep. Deportiva</div>
+                <div class="activity-badge"><i class="fa-solid fa-glove-heart"></i> Boxeo</div>
+                <div class="activity-badge"><i class="fa-solid fa-user-shield"></i> Kickboxing</div>
+                <div class="activity-badge"><i class="fa-solid fa-hand-fist"></i> Defensa Personal</div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: HORARIOS -->
+        <section class="fade-in" style="animation-delay: 0.2s;">
+            <h3 class="section-title">Nuestros Horarios</h3>
+            <table class="schedule-table">
+                <tr>
+                    <td class="day-column">Lunes a Viernes</td>
+                    <td class="time-column">06:00 a 13:00 <br> <span>15:00 a 23:00</span></td>
+                </tr>
+                <tr>
+                    <td class="day-column">Sábados</td>
+                    <td class="time-column">09:00 a 12:00</td>
+                </tr>
+                <tr>
+                    <td class="day-column">Domingos</td>
+                    <td class="time-column" style="color: var(--rojo-neon); font-weight: bold;">Cerrado</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- SECCIÓN: UBICACIÓN Y REDES (ACCIONES DIRECTAS) -->
+        <section class="fade-in" style="animation-delay: 0.3s;">
+            <h3 class="section-title">Ubicación y Contacto</h3>
+            <p style="font-size: 13px; margin-bottom: 15px;"><i class="fa-solid fa-location-dot" style="color: var(--rojo-neon);"></i> Sede Única en "El Huayco", Barrio: El Manzano.</p>
+            
+            <a href="https://maps.app.goo.gl/F2Qfj26EqoZD5UW9A" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-map-location-dot"></i> Cómo llegar en GPS
+            </a>
+            
+            <a href="https://www.instagram.com/andergimnasio?igsh=MXA0YXJqaXg5eWxs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-brands fa-instagram" style="color: #E1306C;"></i> Seguinos en Instagram
+            </a>
+
+            <a href="http://wa.link/800fav" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-brands fa-whatsapp"></i> Ponete en Contacto
+            </a>
+        </section>
+
+        <!-- SECCIÓN: DESCARGA DE RUTINAS -->
+        <section class="fade-in" style="animation-delay: 0.4s;">
+            <h3 class="section-title">Zona de Atletas</h3>
+            <div class="routine-box">
+                <p style="font-size: 13px; margin-bottom: 15px;">Descargá las rutinas oficiales armadas por nuestros entrenadores para trackear tu progreso diario:</p>
+                
+                <div class="routine-item">
+                    <div class="routine-info">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        <span class="routine-name">Rutina 1 - Iniciación</span>
+                    </div>
+                    <a href="rutina 1.pdf" download="rutina 1.pdf" class="download-icon-btn">
+                        <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+
+                <div class="routine-item" style="opacity: 0.4;">
+                    <div class="routine-info">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        <span class="routine-name">Rutina 2 - Hipertrofia</span>
+                    </div>
+                    <span style="font-size: 11px; font-style: italic;">Próximamente</span>
+                </div>
+
+                <div class="routine-item" style="opacity: 0.4;">
+                    <div class="routine-info">
+                        <i class="fa-regular fa-file-pdf"></i>
+                        <span class="routine-name">Rutina 3 - Fuerza Máxima</span>
+                    </div>
+                    <span style="font-size: 11px; font-style: italic;">Próximamente</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 ANDER ACADEMIA. Todos los derechos reservados.</p>
+            <p style="font-size: 10px; margin-top: 5px; color: #333;">Disciplina es hacer lo que debés, incluso cuando no querés.</p>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT DEL CARRUSEL SIMPLIFICADO -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const inner = document.querySelector(".carousel-inner");
+            const items = document.querySelectorAll(".carousel-item");
+            const prev = document.querySelector(".carousel-btn.prev");
+            const next = document.querySelector(".carousel-btn.next");
+            let index = 0;
+
+            function updateCarousel() {
+                inner.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            next.addEventListener("click", () => {
+                index = (index < items.length - 1) ? index + 1 : 0;
+                updateCarousel();
+            });
+
+            prev.addEventListener("click", () => {
+                index = (index > 0) ? index - 1 : items.length - 1;
+                updateCarousel();
+            });
+            
+            // Auto-play cada 4 segundos para dinamismo
+            setInterval(() => {
+                index = (index < items.length - 1) ? index + 1 : 0;
+                updateCarousel();
+            }, 4000);
+        });
+    </script>
+</body>
 </html>
